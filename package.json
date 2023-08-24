@@ -1,5 +1,5 @@
 {
-  "name": "testing-gallery",
+  "name": "testing-gallery-seba",
   "version": "1.0.0",
   "dependencies": {
     "@dcl/sdk": "next"
@@ -10,6 +10,7 @@
   "scripts": {
     "build": "sdk-commands build --skip-install",
     "deploy": "sdk-commands deploy",
-    "start": "sdk-commands start"
+    "start": "sdk-commands start",
+    "export-static": "sdk-commands export-static --destination static/ --realmName testing-gallery-seba --baseUrl BASEURL --commsAdapter ws-room:ws-room-service.decentraland.org/rooms/testing-gallery-seba"
   }
 }
