@@ -1,5 +1,4 @@
 import ReactEcs, { Button, Label, ReactEcsRenderer, UiEntity} from '@dcl/sdk/react-ecs'
-
 import { BackgroundTextureMode, Transform, UiBackground, UiText, engine } from '@dcl/sdk/ecs'
 import { Color4, Vector3 } from '@dcl/sdk/math'
 import { circularSlider } from '../../helper/circular-slider'
@@ -90,8 +89,7 @@ export function testUi(position: Vector3) {
     ReactEcsRenderer.setUiRenderer(() => (
       <UiEntity
         uiTransform={{
-          width: 0,
-          height: 0
+          display:"none"
         }}
       />
     ))

@@ -4,7 +4,7 @@ import { circularSlider } from '../../helper/circular-slider'
 import { createPost } from '../../helper/window-post'
 
 export function testMeshes(position: Vector3) {
-  const post = createPost(position, { windowSize: { x: 1.5, y: 1.5 }, fontSize: 1, title: '<< Ambient: Light Skybox (12:00)'}).move(Vector3.create(2, 0, 0))
+  const post = createPost(position, { windowSize: { x: 1.5, y: 1.5 }, fontSize: 1, title: '<< Ambient: Light Skybox (12:00)' }).move(Vector3.create(2, 0, 0))
   const meshTimer = circularSlider(1.0)
   engine.addSystem(meshTimer.system)
   post.onNext(meshTimer.forceNext)
@@ -74,8 +74,8 @@ export function testMeshes(position: Vector3) {
   meshTimer.add((index) => {
     MeshRenderer.setSphere(meshEntity)
     MeshCollider.setSphere(meshEntity)
-    Material.setPbrMaterial(meshEntity, { emissiveColor:Color4.Green(), emissiveIntensity:0.8})
-    post.displayText('sphere - emmisiveColor=Color4.Green() emissiveIntesity=0.8')
+    Material.setPbrMaterial(meshEntity, { albedoColor: Color4.create(0, 1, 0, 0.3) })
+    post.displayText('sphere - color=Green with alpha 0.3')
     post.displayImage('src/test/mesh/sphere-emissive-green.png')
   })
 
