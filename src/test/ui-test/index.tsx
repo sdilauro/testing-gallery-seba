@@ -90,6 +90,7 @@ export function testUi(position: Vector3) {
       <UiEntity
         uiTransform={{
           display:"none"
+
         }}
       />
     ))
