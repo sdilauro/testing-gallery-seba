@@ -72,28 +72,28 @@ export function testTransform(position: Vector3) {
   cubeWithMaterialTimer.add((index) => {
     removeAllSystems()
     boxRotatingForward()
-    post.displayText(`[${index}] Albedo=(0,0,1) Emissive=(0,0,1) EmissiveIntensity=100`)
+    post.displayText(`[${index}]`)
     post.displayImage(`src/test/material/material-${index}.png`)
   })
 
   cubeWithMaterialTimer.add((index) => {
     removeAllSystems()
     boxRotatingUp()
-    post.displayText(`[${index}] Albedo=(0,0,1) Emissive=(0,0,1) EmissiveIntensity=100`)
+    post.displayText(`[${index}]`)
     post.displayImage(`src/test/material/material-${index}.png`)
   })
 
   cubeWithMaterialTimer.add((index) => {
     removeAllSystems()
     boxRotatingDown()
-    post.displayText(`[${index}] Albedo=(0,0,1) Emissive=(0,0,1) EmissiveIntensity=100`)
+    post.displayText(`[${index}]`)
     post.displayImage(`src/test/material/material-${index}.png`)
   })
 
   cubeWithMaterialTimer.add((index) => {
     removeAllSystems()
     boxRotatingBackward()
-    post.displayText(`[${index}] Albedo=(0,0,1) Emissive=(0,0,1) EmissiveIntensity=100`)
+    post.displayText(`[${index}]`)
     post.displayImage(`src/test/material/material-${index}.png`)
   })
 

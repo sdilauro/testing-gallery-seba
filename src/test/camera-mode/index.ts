@@ -4,7 +4,7 @@ import { circularSlider } from '../../helper/circular-slider'
 import { createPost } from '../../helper/window-post'
 
 export function testCameraModeArea(position: Vector3) {
-  const new_position = Vector3.create(position.x, 0, position.z)
+  const new_position = Vector3.create(position.x, 0.1, position.z)
   const post = createPost(position, { title: "<< Walk to red area to force camera", windowSize: { x: 1.5, y: 1.5 }, fontSize: 1, billboard: BillboardMode.BM_ALL }).move(Vector3.create(2, 0, 0))
   const testCameraTimer = circularSlider(1.0)
 

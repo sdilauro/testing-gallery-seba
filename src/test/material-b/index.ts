@@ -1,7 +1,14 @@
-import { Material, MaterialTransparencyMode, MeshCollider, MeshRenderer, TextShape, Transform, engine } from '@dcl/sdk/ecs'
+import { Material, MaterialTransparencyMode, MeshCollider, MeshRenderer, Transform, engine } from '@dcl/sdk/ecs'
 import { Color4, Vector3 } from '@dcl/sdk/math'
+import { GetUserDataResponse, UserData, getUserData } from '~system/UserIdentity'
 import { circularSlider } from '../../helper/circular-slider'
 import { createPost } from '../../helper/window-post'
+
+
+async function myAsyncTask() {
+  let response: GetUserDataResponse = await getUserData({ userId: String })
+  return response.data?.userId
+}
 
 export function testMaterialB(position: Vector3) {
   const post = createPost(position, {
@@ -96,6 +103,23 @@ export function testMaterialB(position: Vector3) {
     post.displayText(`[${index}] texture=rock-wall-texture.png bumpTexture=rock-wall-bump roughness=0.75 metallic=0`)
     post.displayImage(`src/test/material-b/${index}.png`)
   })
+  myAsyncTask().then((data) => {
+    const userIdValue: string | undefined = data
+    console.log('userID: ', userIdValue)
+    if (userIdValue !== undefined) {
+      cubeWithMaterialTimer.add((index) => {
+        Material.setPbrMaterial(entity, {
+          texture: Material.Texture.Avatar({
+            userId: userIdValue
+          })
+        })
+        post.displayText(`[${index}] Avatar`)
+        post.displayImage(`images/to-do.png`)
+      })
+    }
+
+  })
+
 
 }
 
