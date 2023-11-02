@@ -11,6 +11,6 @@
     "build": "sdk-commands build --skip-install",
     "deploy": "sdk-commands deploy",
     "start": "sdk-commands start",
-    "export-static": "sdk-commands export-static --destination static/ --realmName testing-gallery-seba --baseUrl https://sdilauro.github.io/testing-gallery-seba/ --commsAdapter ws-room:ws-room-service.decentraland.org/rooms/testing-gallery-seba"
+    "export-static": "sdk-commands export-static --destination static/ --realmName testing-gallery-seba --baseUrl https://sdilauro.github.io/ --commsAdapter ws-room:ws-room-service.decentraland.org/rooms/testing-gallery-seba"
   }
 }
